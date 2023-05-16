@@ -75,7 +75,7 @@ Les boutons ![](images/Bouton+.png) et ![](images/Bouton-.png) permettent de mod
 La classe principale est `RectanglePerimeterCalculatorAndDrawer`. Elle vous est intégralement donnée. À priori, vous n'aurez pas à la modifier.
 
 1. Utilisez l'outil _SceneBuilder_ pour compléter le fichier `fenetrePerimetre.fxml` pour que l'application ressemble à l'image ci-dessus. La fenêtre correspond à une grille et le panneau coloré du bas est déjà donné sous forme de conteneur `Pane`. **Les lignes du rectangle ne doivent pas encore être dessinées.**
-2. Définissez dans la classe `Rectangle` quatre attributs `IntegerProperty` `xA`, `yA`, `xB`, `yB`, ainsi qu'une propriété `perimetre` et instanciez-les dans le constructeur. Ajoutez un _getter_ sur chacune de ces propriétés (mais pas de _getter_ sur la valeur).
+2. Définissez dans la classe `Rectangle` quatre attributs `IntegerProperty` `xA`, `yA`, `xB`, `yB`, ainsi qu'une propriété `perimetre` et instanciez-les dans le constructeur. Ajoutez un _getter_ sur chacune de ces propriétés (mais pas de _setter_ sur la valeur).
 3. Écrivez le code de la méthode `createBinding()` qui doit :
     * gérer le calcul de la largeur du rectangle
     * gérer le calcul de la hauteur du rectangle
