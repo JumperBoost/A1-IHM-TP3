@@ -47,8 +47,10 @@ qui permet de savoir quelle est la valeur actuelle de la ComboBox. Quand un item
 3. Modifiez le code de la classe `AppMaths` afin de prendre en compte le choix de l'utilisateur et mettre à jour la fenêtre de façon à ce qu'elle ressemble à celle de l'étape 2. Pour mettre à jour dynamiquement les exercices affichés en fonction du choix de l'utilisateur, on vous propose de suivre le processus suivant :
     * Ajouter un `ChangeListener` sur `valueProperty` de votre `ComboBox` afin que la méthode `changed()` de cet écouteur fasse le changement nécessaire
     * Dans la méthode `changed()`, vous devrez :
-        * créer le nombre nécessaire de lignes d'exercices et les ajouter dans un conteneur `VBox` (pensez à nettoyer au préalable les exercices qui seraient déjà dans la liste...) ;
+        * créer le nombre nécessaire de lignes d'exercices et les ajouter dans un conteneur `VBox` (pensez à nettoyer au préalable les exercices qui seraient déjà dans la liste...).
         * ajouter dans le même conteneur un bouton de validation des résultats qui, pour moment, ne fera rien.
+        * pensez à ajuster la taille de la fenêtre pour que tous les éléments de votre conteneur contenant les exercices soient visibles. Vous pouvez utiliser l'instruction suivante :
+          `votreContaineur.getScene().getWindow().sizeToScene();`
 
 4. La classe `Exercice` vous est partiellement donnée. Elle génère un exercice avec son énoncé et sa solution. Ajoutez à cette classe une propriété `IntegerProperty solution` qui encapsulera la solution à l'énoncé. Ajoutez un _getter_ sur cette propriété.
 
