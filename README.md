@@ -10,9 +10,11 @@
       [Cyrille Nadal](mailto:cyrille.nadal@umontpellier.fr),
       [Nathalie Palleja](mailto:nathalie.palleja@umontpellier.fr),
       [Xavier Palleja](mailto:xavier.palleja@umontpellier.fr),
+      [Zouhaira Ayadi](mailto:zouhaira.ayadi@umontpellier.fr),
       [Petru Valicov](mailto:petru.valicov@umontpellier.fr)
-* Le [forum Piazza](https://piazza.com/class/lfmbartihpv60i) de ce cours pour poser vos questions
+* Le [forum Piazza](https://piazza.com/class/lusd3gv57i85y1/) de ce cours pour poser vos questions
 * [Email](mailto:petru.valicov@umontpellier.fr) pour une question d'ordre privée concernant le cours.
+
 
 ## TP 3 : gestionnaires d'événement et propriétés
 ##### Sujet inspiré de l'examen à l'IUT d'Aix-Marseille Université en 2021
@@ -31,13 +33,13 @@ On s'intéresse à un petit programme qui permet d'afficher des problèmes arith
 
 
 Le contrôle que vous aurez à utiliser est
-un [ComboBox](https://openjfx.io/javadoc/18/javafx.controls/javafx/scene/control/ComboBox.html), qui permet de choisir
+un [ComboBox](https://openjfx.io/javadoc/20/javafx.controls/javafx/scene/control/ComboBox.html), qui permet de choisir
 le nombre d'exercices à afficher. Veuillez regarder la documentation de cette classe pour savoir comment l'utiliser
 avant de poursuivre.
 
 Notamment, notez l'utilisation de la
-propriété [valueProperty](https://openjfx.io/javadoc/18/javafx.controls/javafx/scene/control/ComboBoxBase.html#valueProperty())
-et [selectedItemProperty](https://openjfx.io/javadoc/18/javafx.controls/javafx/scene/control/SelectionModel.html#selectedItemProperty()),
+propriété [valueProperty](https://openjfx.io/javadoc/20/javafx.controls/javafx/scene/control/ComboBoxBase.html#valueProperty())
+et [selectedItemProperty](https://openjfx.io/javadoc/20/javafx.controls/javafx/scene/control/SelectionModel.html#selectedItemProperty()),
 qui permet de savoir quelle est la valeur actuelle de la ComboBox. Quand un item est sélectionné, la propriété est mise
 à jour pour représenter l'item sélectionné.
 
@@ -56,7 +58,7 @@ qui permet de savoir quelle est la valeur actuelle de la ComboBox. Quand un item
 
 5. Ajoutez une propriété `BooleanProperty correct` à la classe `LigneExercice`. Cette propriété devra permettre de savoir si la réponse fournie est correcte (c'est-à-dire correspond à la solution de l'exercice).
 
-6. Ajoutez dans la classe principale `AppMaths` un gestionnaire d'événement sur le bouton de validation. Il devra afficher une nouvelle fenêtre indiquant le nombre de réponses correctes. Pour cela, vous utiliserez la classe [Alert](https://openjfx.io/javadoc/18/javafx.controls/javafx/scene/control/Alert.html) de JavaFX. La fonction `showAndWait()` vous permettra de rendre la fenêtre bloquante : tant que l'utilisateur n'a pas validé, il ne pourra pas revenir sur la fenêtre principale.
+6. Ajoutez dans la classe principale `AppMaths` un gestionnaire d'événement sur le bouton de validation. Il devra afficher une nouvelle fenêtre indiquant le nombre de réponses correctes. Pour cela, vous utiliserez la classe [Alert](https://openjfx.io/javadoc/20/javafx.controls/javafx/scene/control/Alert.html) de JavaFX. La fonction `showAndWait()` vous permettra de rendre la fenêtre bloquante : tant que l'utilisateur n'a pas validé, il ne pourra pas revenir sur la fenêtre principale.
 
 7. Dans votre version actuelle, lorsqu'un utilisateur choisit un nombre d'exercices, l'intégralité de la liste des exercices est régénérée. Modifiez le code de façon à ce qu'un maximum des exercices incorrectement répondus soit régénéré d'abord avant de générer les nouveaux (si le nombre d'exercices incorrects est supérieur au choix `n` de la `ComboBox`, on affichera les `n` premiers exercices incorrects).
 
